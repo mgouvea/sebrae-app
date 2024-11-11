@@ -5,6 +5,5 @@ export const useViaCep = () => {
   return useQuery({
     queryKey: ['viacep'],
     queryFn: () => GetViaCep,
-    staleTime: 1000 * 60 * 5,
   });
 };
