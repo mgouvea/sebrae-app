@@ -44,6 +44,10 @@ export default function Home() {
         </Row>
 
         <Row>
+          <Cell>1</Cell>
+          <Cell>2</Cell>
+        </Row>
+        <Row>
           <Cell>3</Cell>
           <Cell>4</Cell>
         </Row>
@@ -55,7 +59,23 @@ export default function Home() {
         {error ? (
           <p>{error}</p>
         ) : data ? (
-          <pre>{JSON.stringify(data, null, 2)}</pre>
+          <ul
+            style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}
+          >
+            <li>CEP: {data.cep}</li>
+            <li>LOGRADOURO: {data.logradouro}</li>
+            <li>COMPLEMENTO: {data.complemento}</li>
+            <li>UNIDADE: {data.unidade}</li>
+            <li>BAIRRO: {data.bairro}</li>
+            <li>LOCALIDADE: {data.localidade}</li>
+            <li>UF: {data.uf}</li>
+            <li> ESTADO: {data.estado}</li>
+            <li>REGIÃO: {data.regiao}</li>
+            <li>IBGE: {data.ibge}</li>
+            <li>GIA: {data.gia}</li>
+            <li>DDD: {data.ddd}</li>
+            <li>SIAFE: {data.siafi}</li>
+          </ul>
         ) : (
           <p>Carregando dados...</p>
         )}
